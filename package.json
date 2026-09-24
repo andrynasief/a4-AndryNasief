@@ -1,0 +1,12 @@
+{
+  "name": "a4-andry-suika",
+  "version": "1.0.0",
+  "description": "Assignment 4 - Orbit: a 3D sphere-merge game with mouse-aimed landing projection",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

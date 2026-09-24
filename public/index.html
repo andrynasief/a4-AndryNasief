@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sphere Merge</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%237dd8ff%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="scene"></canvas>
+
+<div id="hud">
+  <div id="hud-left">
+    <div class="hud-label">Score</div>
+    <div id="score">0</div>
+  </div>
+  <div id="hud-right">
+    <div class="hud-label">Next</div>
+    <div id="next-swatch"></div>
+  </div>
+</div>
+
+<button id="help-btn" title="How to play">?</button>
+<button id="panel-btn" title="Physics controls">Controls</button>
+
+<div id="instructions" class="overlay">
+  <div class="card">
+    <h1>Orbit</h1>
+    <p class="tagline">Aim, drop, merge. Fill the glass without spilling over the rim.</p>
+    <ul>
+      <li><strong>Move the mouse</strong> (or drag on touch) to aim — a ring on the floor shows where the sphere will land.</li>
+      <li><strong>Click or tap</strong> to drop the current sphere into the container.</li>
+      <li>Two spheres of the <strong>same size and color</strong> merge into the next size up when they touch.</li>
+      <li>Keep the stack below the rim line. If it stays over the line too long, the run ends.</li>
+      <li>Open <strong>Controls</strong> in the top right to tune gravity, bounce, and more while you play.</li>
+    </ul>
+    <button id="start-btn">Start dropping</button>
+  </div>
+</div>
+
+<div id="game-over" class="overlay hidden">
+  <div class="card">
+    <h1>Overflow</h1>
+    <p class="tagline">The container filled past the rim.</p>
+    <p id="final-score-line"></p>
+    <button id="restart-btn">Try again</button>
+  </div>
+</div>
+
+<div id="pane-holder"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tweakpane@3.1.10/dist/tweakpane.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
