@@ -1,6 +1,6 @@
 # 3D Sphere Merge - Andry Nasief**
 
-**Live application:** Render deployment pending. Replace this line with the public URL after deployment.
+**Live App** [LINK](https://a4-andry-nasief.onrender.com/)
 
 You can aim and drop colored spheres into a glass cylinder. Matching spheres merge into larger spheres, earn points, and produce synthesized sound effects. The goal is to build larger spheres and increase the score without keeping the stack above the orange danger line.
 
